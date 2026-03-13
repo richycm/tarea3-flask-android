@@ -31,7 +31,7 @@
 
 # 📖 Descripción del Proyecto
 
-Este proyecto consiste en el desarrollo e integración de un **Backend RESTful dockerizado** y una **aplicación cliente Android nativa**. Cumple y expande los objetivos de la práctica universitaria al no solo implementar el ciclo de autenticación (Login/Registro), sino al integrar un panel de administración completo (CRUD de usuarios).
+Este proyecto consiste en el desarrollo e integración de un **Backend RESTful dockerizado** y una **aplicación cliente Android nativa**. Cumple y expande los objetivos de la práctica al implementar e integrar un panel de administración casi completo para usuarios.
 
 El flujo de comunicación abarca:
 
@@ -89,7 +89,7 @@ El backend expone las siguientes rutas, superando los requerimientos iniciales d
 
 | Método   | Endpoint               | Descripción                                               |
 | -------- | ---------------------- | --------------------------------------------------------- |
-| `GET`    | `/`                    | Health Check. Verifica que la API funciona.               |
+| `GET`    | `/`                    | Health Check. Verifica que la API si funciona.            |
 | `POST`   | `/register`            | Registra un nuevo usuario validando campos y contraseñas. |
 | `POST`   | `/login`               | Autentica un usuario existente mediante Bcrypt.           |
 | `GET`    | `/users`               | *(Extra)* Obtiene la lista de todos los usuarios.         |
@@ -159,16 +159,16 @@ Shift + F10
 
 La interfaz fue construida completamente con **Jetpack Compose**.
 
-* **Pantalla de Login:** usa `LaunchedEffect` que realiza polling cada 5 segundos al endpoint `/` para verificar si el servidor está activo.
-* **Pantalla de Registro:** valida localmente que las contraseñas coincidan antes de enviar la petición.
-* **Pantalla de Bienvenida:** recibe el `username` mediante **type-safe routing** de Compose Navigation.
-* **Gestión de Usuarios (CRUD):** un `LazyColumn` interactivo permite editar nombres, cambiar contraseñas y eliminar usuarios mediante peticiones `PUT` y `DELETE`.
+* **Pantalla de login:** usa `LaunchedEffect` que realiza polling cada 5 segundos al endpoint `/` y asi verificar verificar si el servidor está activo.
+* **Pantalla de registro:** validara localmente que las contraseñas coincidan antes de enviar la petición.
+* **Pantalla de Bienvenida:** recibe el nombre mediante **type-safe routing** de Compose Navigation.
+* **Gestión de Usuarios:** un `LazyColumn` interactivo permite editar nombres, cambiar contraseñas y eliminar usuarios mediante peticiones `PUT` y `DELETE`.
 
 ---
 
-# 🛡️ Resiliencia y Manejo de Errores
+# 🛡️Manejo de Errores
 
-El sistema está diseñado para evitar cierres inesperados ante fallos de red.
+El sistema está diseñado para evitar cierres inesperados ante fallos de red cpmo es indicado en las intrucciones de la tarea
 
 Si el contenedor Docker se detiene:
 
