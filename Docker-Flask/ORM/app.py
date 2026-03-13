@@ -101,9 +101,6 @@ def login():
     }), 401
 
 
-# ----------------------------
-# LISTAR USUARIOS
-# ----------------------------
 @app.route('/users', methods=['GET'])
 def get_users():
 
@@ -112,9 +109,6 @@ def get_users():
     return jsonify([user.to_dict() for user in users])
 
 
-# ----------------------------
-# EDITAR USERNAME
-# ----------------------------
 @app.route('/users/<int:user_id>/username', methods=['PUT'])
 def update_username(user_id):
 
@@ -169,11 +163,11 @@ def update_password(user_id):
     if not user:
         return jsonify({"error": "usuario no encontrado"}), 404
 
-    # verificar contraseña actual
+
     if not bcrypt.check_password_hash(user.password, old_password):
         return jsonify({"error": "contraseña actual incorrecta"}), 401
 
-    # actualizar contraseña
+
     hashed_password = bcrypt.generate_password_hash(new_password).decode('utf-8')
 
     user.password = hashed_password
@@ -183,9 +177,6 @@ def update_password(user_id):
     return jsonify({"message": "contraseña actualizada correctamente"})
 
 
-# ----------------------------
-# ELIMINAR USUARIO
-# ----------------------------
 @app.route('/users/<int:user_id>', methods=['DELETE'])
 def delete_user(user_id):
 
@@ -199,10 +190,6 @@ def delete_user(user_id):
 
     return jsonify({"message": "usuario eliminado"})
 
-
-# ----------------------------
-# MAIN
-# ----------------------------
 if __name__ == '__main__':
 
     with app.app_context():
