@@ -216,7 +216,7 @@ Si el contenedor Docker se detiene:
 ---
 
 ### 5. Login incorrecto — credenciales inválidas
-<img src="CapturasApp/8.png" width="280">
+<img src="CapturasApp/81.png" width="280">
 
 ---
 
