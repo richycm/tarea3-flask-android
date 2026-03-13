@@ -184,25 +184,72 @@ Si el contenedor Docker se detiene:
 
 # 📸 Orden de Capturas de Pantalla (Entregables)
 
-1. **API funcionando** — `curl http://localhost:5000/`
 
-2. **Registro exitoso** — creación de usuario
+<div align="center">
 
-3. **Usuario duplicado** — error al registrar existente
+### 1. API funcionando — `curl http://localhost:5000/`
+<img src="CapturasApp/1.png" width="700">
+<br>
+<img src="CapturasApp/2.png" width="280">
 
-4. **Login exitoso** — acceso correcto
+---
 
-5. **Login incorrecto** — credenciales inválidas
+### 2. Registro exitoso — creación de usuario
+<p>
+  <img src="CapturasApp/3.png" width="280">
+  <img src="CapturasApp/4.png" width="280">
+</p>
 
-6. **Error de red** — Docker apagado
+---
 
-7. **Lista de usuarios (Extra)**
+### 3. Usuario duplicado — error al registrar existente
+<img src="CapturasApp/5.png" width="280">
 
-8. **Editar username (Extra)**
+---
 
-9. **Cambiar contraseña (Extra)**
+### 4. Login exitoso — acceso correcto
+<p>
+  <img src="CapturasApp/6.png" width="280">
+  <img src="CapturasApp/7.png" width="280">
+</p>
 
-10. **Eliminar usuario (Extra)**
+---
+
+### 5. Login incorrecto — credenciales inválidas
+<img src="CapturasApp/8.png" width="280">
+
+---
+
+### 6. Error de red — Docker apagado
+<img src="CapturasApp/15.png" width="280">
+
+---
+
+### 7. Lista de usuarios (Extra)
+<img src="CapturasApp/9.png" width="280">
+
+---
+
+### 8. Editar username (Extra)
+<p>
+  <img src="CapturasApp/10.png" width="280">
+  <img src="CapturasApp/11.png" width="280">
+</p>
+
+---
+
+### 9. Cambiar contraseña (Extra)
+<p>
+  <img src="CapturasApp/12.png" width="280">
+  <img src="CapturasApp/13.png" width="280">
+</p>
+
+---
+
+### 10. Eliminar usuario (Extra)
+<img src="CapturasApp/14.png" width="280">
+
+</div>
 
 
 ---
