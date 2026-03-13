@@ -157,13 +157,15 @@ Shift + F10
 
 # 🧩 Estructura de la Aplicación Android (Pantallas)
 
-La interfaz fue construida completamente con **Jetpack Compose**.
+La interfaz de usuario ha sido desarrollada íntegramente con **Jetpack Compose**, aplicando un enfoque reactivo y moderno para la gestión de estados.
 
-* **Pantalla de login:** usa `LaunchedEffect` que realiza polling cada 5 segundos al endpoint `/` y asi verificar verificar si el servidor está activo.
-* **Pantalla de registro:** validara localmente que las contraseñas coincidan antes de enviar la petición.
-* **Pantalla de Bienvenida:** recibe el nombre mediante **type-safe routing** de Compose Navigation.
-* **Gestión de Usuarios:** un `LazyColumn` interactivo permite editar nombres, cambiar contraseñas y eliminar usuarios mediante peticiones `PUT` y `DELETE`.
-
+* **Pantalla de Login:** Implementa un `LaunchedEffect` con una corrutina que realiza **polling asíncrono** cada 5 segundos al endpoint `/`. Esto permite verificar en tiempo real si el servidor está activo, actualizando la UI dinámicamente según la disponibilidad del backend.
+* **Pantalla de Registro:** Incluye lógica de validación en el lado del cliente (Frontend). El sistema verifica que los campos no estén vacíos y que ambas contraseñas coincidan antes de disparar la petición de red, optimizando así el uso de la API.
+* **Pantalla de Bienvenida:** Utiliza el sistema de **Type-safe routing** de *Compose Navigation* para la transferencia de datos entre pantallas, recibiendo y mostrando el nombre del usuario autenticado de forma segura.
+* **Gestión de Usuarios (Panel CRUD):** Implementa un componente `LazyColumn` interactivo para el manejo eficiente de listas extensas. Permite la administración total de las cuentas mediante:
+    * **Edición de nombres:** Peticiones de tipo `PUT`.
+    * **Actualización de seguridad:** Cambio de contraseñas mediante `PUT`.
+    * **Eliminación de registros:** Operaciones `DELETE` con actualización inmediata del estado de la lista.
 ---
 
 # 🛡️Manejo de Errores
